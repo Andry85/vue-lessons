@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="utf-8">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    img {
+        max-width: 100%;
+    }
+    .product {
+        display: flex;
+        align-self: start;
+    }
+    .product-image {
+        flex-basis: 350px;
+        padding: 15px;
+    }
+    .product-image img {
+        border: 1px solid #ddd;
+    }
+    .product-info {
+        flex-basis: 320px;
+        padding: 15px;
+    }
+	.color-box {
+		width: 40px;
+		height: 40px;
+		margin: 10px 0;
+	}
+	.add-btn {
+		background: orange;
+		padding: 5px;
+		border: 0;
+		color: #fff;
+	}
+	.add-btn:focus {
+		outline: none;
+	}
+	.add-btn:disabled {
+		background: #ddd;
+	}
+	.outoff {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+
+     <!--<div id="app">
+		<div class="cart">
+                {{cart.length}}
+        </div>
+        <product :premium="premium" @add-to-cart="updateCart"></product>
+		
+		<div>
+		<h2>Reviews</h2>
+		<p v-if="!reviews.length">There are no reviews yet.</p>
+		<ul>
+		  <li v-for="review in reviews">
+		  <p>{{ review.name }}</p>
+		  <p>Rating: {{ review.rating }}</p>
+		  <p>{{ review.review }}</p>
+		  </li>
+		</ul>
+	   </div>
+		<product-review @review-submitted="addReview"></product-review> 
+		
+    </div>-->
+	
+	<div id="app">
+	   <span v-bind:title="message">
+		Наведи на меня курсор на пару секунд,
+		чтобы увидеть динамически связанное значение title!
+	  </span>
+	  <span v-if="seen">Сейчас меня видно</span>
+	  <ol>
+		<li v-for="todo in todos">
+		  {{ todo.text }}
+		</li>
+	  </ol>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="main.js"></script> -->
+	 <script src="index.js"></script>
+</body>
+</html>
